@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <title>Inventario</title>
+    <style>
+      body {
+        background: #242424;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .panel {
+        width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+      }
+
+      .panel-heading {
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .control {
+        margin-bottom: 15px;
+      }
+
+      .control p {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      input {
+        border-radius: 8px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="panel is-link">
+      <p class="panel-heading">Inventario</p>
+      <div class="control">
+        <p>Codigo del producto</p>
+        <input
+          class="input is-focused"
+          type="number"
+          placeholder="Codigo..."
+        />
+      </div>
+
+      <div class="control">
+        <p>Nombre del producto</p>
+        <input
+          class="input is-focused"
+          type="text"
+          placeholder="Nombre..."
+        />
+      </div>
+
+      <div class="control">
+        <p>Cantidad</p>
+        <input
+          class="input is-focused"
+          type="number"
+          placeholder="Cantidad..."
+        />
+      </div>
+
+      <div class="control">
+        <p>Marca del producto</p>
+        <input
+          class="input is-focused"
+          type="text"
+          placeholder="Marca..."
+        />
+      </div>
+      <div class="buttons is-centered mt-4">
+        <button class="button is-link">Enviar</button>
+      </div>
+    </article>
+  </body>
+</html>

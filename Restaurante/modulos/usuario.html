@@ -8,133 +8,185 @@
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
     <title>Formulario de usuario</title>
+    <style>
+      body {
+        background: #242424;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .panel {
+        width: 350px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        padding: 15px;
+      }
+
+      .panel-heading {
+        text-align: center;
+        border-radius: 8px;
+      }
+
+      .control {
+        margin-bottom: 15px;
+      }
+
+      .control p {
+        font-weight: 600;
+        margin-bottom: 5px;
+      }
+
+      input {
+        border-radius: 8px !important;
+      }
+    </style>
   </head>
   <body>
-    <div class="field">
-      <label class="label">Nombre</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Nombre..." />
-      </div>
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <label class="label">Apellido</label>
-      <div class="control">
-        <input class="input" type="text" placeholder="Apellido..." />
-      </div>
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <label class="label">Tipo de documento</label>
-      <div class="control">
-        <div class="select">
-          <select>
-            <option>Cédula</option>
-            <option>Tarjeta de identidad</option>
-            <option>Otro</option>
-          </select>
+    <article class="panel is-link">
+      <p class="panel-heading">Registro</p>
+      <div class="field">
+        <label class="label">Nombre</label>
+        <div class="control">
+          <input
+            class="input is-focused"
+            type="text"
+            placeholder="Nombre..."
+          />
         </div>
       </div>
-    </div>
-    <br /><br />
+      <br /><br />
 
-    <div class="field">
-      <div class="control">
-        <label class="label">Número de documento</label>
+      <div class="field">
+        <label class="label">Apellido</label>
+        <div class="control">
+          <input
+            class="input is-focused"
+            type="text"
+            placeholder="Apellido..."
+          />
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <label class="label">Tipo de documento</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Cédula</option>
+              <option>Tarjeta de identidad</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <div class="control">
+          <label class="label">Número de documento</label>
+          <input
+            class="input is-focused"
+            type="number"
+            placeholder="Documento..."
+          />
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <div class="control">
+          <label class="label">Número de telefono</label>
+          <input
+            class="input is-focused"
+            type="number"
+            placeholder="Telefono..."
+          />
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <div class="control">
+          <label class="label">Email</label>
+          <div class="control has-icons-left has-icons-right">
+            <input
+              class="input is-focused"
+              type="text"
+              placeholder="@..."
+            />
+            <span class="icon is-small is-left">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <span class="icon is-small is-right">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+          </div>
+          <p class="help is-danger"></p>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <div class="control">
+          <label class="label">Genero</label>
+
+          <div class="select">
+            <select>
+              <option>Femenino</option>
+              <option>Masculino</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <label class="label">Cargo</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Usuario</option>
+              <option>Administrador</option>
+              <option>Otro</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br /><br />
+
+      <div class="field">
+        <label class="label">Fecha de nacimiento</label>
         <input
-          type="number"
-          id="documento"
-          name="documento"
-          placeholder="Ingresa tu número de documento"
-          required
+          class="input is-focused"
+          type="date"
+          placeholder="Fecha..."
         />
       </div>
-    </div>
-    <br /><br />
+      <br /><br />
 
-    <div class="field">
-      <div class="control">
-        <label class="label">Número de telefono</label>
+      <div class="field">
+        <label class="label">Contraseña</label>
         <input
+          class="input is-focused"
           type="number"
-          id="telefono"
-          name="telefono"
-          placeholder="Ingresa tu número"
-          required
+          placeholder="Contraseña..."
         />
       </div>
-    </div>
-    <br /><br />
+      <br /><br />
 
-    <div class="field">
-      <div class="control">
-        <label class="label">Email</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-danger" type="email" placeholder="Email..." />
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-exclamation-triangle"></i>
-          </span>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Enviar</button>
         </div>
-        <p class="help is-danger"></p>
-      </div>
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <div class="control">
-        <label class="label">Genero</label>
-
-        <div class="select">
-          <select>
-            <option>Femenino</option>
-            <option>Masculino</option>
-            <option>Otro</option>
-          </select>
+        <div class="control">
+          <button class="button is-link">Cancelar</button>
         </div>
       </div>
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <label class="label">Cargo</label>
-      <div class="control">
-        <div class="select">
-          <select>
-            <option>Usuario</option>
-            <option>Administrador</option>
-            <option>Otro</option>
-          </select>
-        </div>
-      </div>
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <label class="label">Fecha de nacimiento</label>
-
-      <input type="date" id="start" name="trip-start" value="2018-07-22" />
-    </div>
-    <br /><br />
-
-    <div class="field">
-      <label class="label">Contraseña</label>
-      <input class="input is-link" type="text" placeholder="contraseña..." />
-    </div>
-    <br /><br />
-
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link">Enviar</button>
-      </div>
-      <div class="control">
-        <button class="button is-link is-light">Cancelar</button>
-      </div>
-    </div>
-    <br /><br />
+      <br /><br />
+    </article>
   </body>
 </html>
