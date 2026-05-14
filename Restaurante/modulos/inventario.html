@@ -3,89 +3,286 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BULMA -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
+
+    <!-- ICONOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <title>Inventario</title>
+    <div class="boton-volver">
+      <a href="index.html" class="button volver-btn">
+        <i class="fa-solid fa-arrow-left mr-2"></i>
+        Volver al inicio
+      </a>
+    </div>
+
     <style>
       body {
-        background: #242424;
+        background: #0f0f0f;
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 30px;
+        font-family: "Segoe UI", sans-serif;
       }
 
-      .panel {
-        width: 350px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        padding: 15px;
+      .contenedor {
+        width: 100%;
+        max-width: 900px;
+        background: #1b1b1b;
+        border-radius: 20px;
+        border: 1px solid #7c4dff;
+        box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
+        overflow: hidden;
       }
 
-      .panel-heading {
+      .titulo {
         text-align: center;
-        border-radius: 8px;
+        padding: 25px;
+        font-size: 34px;
+        font-weight: bold;
+        color: #bb86fc;
+        border-bottom: 1px solid #2f2f2f;
       }
 
-      .control {
-        margin-bottom: 15px;
+      .subtitulo {
+        text-align: center;
+        color: #b5b5b5;
+        margin-top: -10px;
+        margin-bottom: 25px;
       }
 
-      .control p {
+      .contenido {
+        display: flex;
+        gap: 20px;
+        padding: 25px;
+      }
+
+      /* IZQUIERDA */
+      .izquierda {
+        width: 30%;
+        background: #242424;
+        border: 1px solid #383838;
+        border-radius: 18px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+      }
+
+      .imagen-producto {
+        width: 160px;
+        height: 160px;
+        border-radius: 20px;
+        border: 3px solid #8c52ff;
+        padding: 12px;
+        background: #1b1b1b;
+        object-fit: cover;
+      }
+
+      /* DERECHA */
+      .derecha {
+        width: 70%;
+        background: #242424;
+        border: 1px solid #383838;
+        border-radius: 18px;
+        padding: 30px;
+      }
+
+      .label {
+        color: #ececec;
         font-weight: 600;
-        margin-bottom: 5px;
       }
 
-      input {
-        border-radius: 8px !important;
+      .input {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .input::placeholder {
+        color: #9e9e9e;
+      }
+
+      .input:focus {
+        border-color: #9b5cff;
+        box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
+      }
+
+      .icon {
+        color: #bb86fc;
+      }
+
+      .botones {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .button.is-purple {
+        background: #8c52ff;
+        color: white;
+        border: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .button.is-purple:hover {
+        background: #a66cff;
+        transform: scale(1.02);
+      }
+
+      .button.is-dark-custom {
+        background: #2c2c2c;
+        color: white;
+        border: 1px solid #444;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .button.is-dark-custom:hover {
+        background: #3a3a3a;
+      }
+
+      @media screen and (max-width: 768px) {
+        .contenido {
+          flex-direction: column;
+        }
+
+        .izquierda,
+        .derecha {
+          width: 100%;
+        }
+
+        .botones {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
+
   <body>
-    <article class="panel is-link">
-      <p class="panel-heading">Inventario</p>
-      <div class="control">
-        <p>Codigo del producto</p>
-        <input
-          class="input is-focused"
-          type="number"
-          placeholder="Codigo..."
-        />
-      </div>
+    <div class="contenedor">
+      <!-- TITULO -->
+      <div class="titulo">INVENTARIO</div>
 
-      <div class="control">
-        <p>Nombre del producto</p>
-        <input
-          class="input is-focused"
-          type="text"
-          placeholder="Nombre..."
-        />
-      </div>
+      <p class="subtitulo">Administración y control de productos</p>
 
-      <div class="control">
-        <p>Cantidad</p>
-        <input
-          class="input is-focused"
-          type="number"
-          placeholder="Cantidad..."
-        />
-      </div>
+      <div class="contenido">
+        <!-- COLUMNA IZQUIERDA -->
+        <div class="izquierda">
+          <div class="icono-inventario">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
 
-      <div class="control">
-        <p>Marca del producto</p>
-        <input
-          class="input is-focused"
-          type="text"
-          placeholder="Marca..."
-        />
+          <div class="has-text-centered">
+            <p style="color: #ececec; font-size: 22px; font-weight: bold">
+              Inventario
+            </p>
+
+            <p style="color: #b5b5b5; margin-top: 12px; line-height: 1.6">
+              Controla los productos, cantidades y marcas del restaurante en un
+              solo lugar.
+            </p>
+          </div>
+        </div>
+
+        <!-- COLUMNA DERECHA -->
+        <div class="derecha">
+          <div class="columns is-multiline">
+            <!-- CODIGO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label"> Codigo del producto </label>
+
+                <div class="control has-icons-left">
+                  <input class="input" type="number" placeholder="Codigo..." />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-barcode"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- NOMBRE -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label"> Nombre del producto </label>
+
+                <div class="control has-icons-left">
+                  <input class="input" type="text" placeholder="Nombre..." />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-box"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CANTIDAD -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label"> Cantidad </label>
+
+                <div class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder="Cantidad..."
+                  />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- MARCA -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label"> Marca del producto </label>
+
+                <div class="control has-icons-left">
+                  <input class="input" type="text" placeholder="Marca..." />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-tags"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="column is-12">
+              <div class="botones">
+                <button class="button is-purple is-fullwidth">
+                  <i class="fa-solid fa-floppy-disk mr-2"></i>
+                  Guardar
+                </button>
+
+                <button class="button is-dark-custom is-fullwidth">
+                  <i class="fa-solid fa-xmark mr-2"></i>
+                  Cancelar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="buttons is-centered mt-4">
-        <button class="button is-link">Enviar</button>
-      </div>
-    </article>
+    </div>
   </body>
 </html>
-
-
