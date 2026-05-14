@@ -1,247 +1,256 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pedidos</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedidos</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
 
-  <style>
-    body{
-      background: #0f0f0f;
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 30px;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <style>
+      body {
+        background: #0f0f0f;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        font-family: "Segoe UI", sans-serif;
+      }
 
-    .pedido-box{
-      width: 100%;
-      max-width: 850px;
-      background: #1b1b1b;
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
-      border: 1px solid #7c4dff;
-    }
+      .pedido-box {
+        width: 100%;
+        max-width: 850px;
+        background: #1b1b1b;
+        border-radius: 20px;
+        padding: 40px;
+        box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
+        border: 1px solid #7c4dff;
+      }
 
-    .title{
-      color: #bb86fc !important;
-      text-align: center;
-      margin-bottom: 10px !important;
-    }
+      .title {
+        color: #bb86fc !important;
+        text-align: center;
+        margin-bottom: 10px !important;
+      }
 
-    .subtitle{
-      text-align: center;
-      color: #b5b5b5 !important;
-      margin-bottom: 35px !important;
-    }
+      .subtitle {
+        text-align: center;
+        color: #b5b5b5 !important;
+        margin-bottom: 35px !important;
+      }
 
-    .label{
-      color: #ececec;
-      font-weight: 600;
-    }
+      .label {
+        color: #ececec;
+        font-weight: 600;
+      }
 
-    .input,
-    .textarea,
-    .select select{
-      background: #2a2a2a;
-      border: 1px solid #3a3a3a;
-      color: white;
-      transition: 0.3s;
-    }
+      .input,
+      .textarea,
+      .select select {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        color: white;
+        transition: 0.3s;
+      }
 
-    .input:focus,
-    .textarea:focus,
-    .select select:focus{
-      border-color: #9b5cff;
-      box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
-    }
+      .input:focus,
+      .textarea:focus,
+      .select select:focus {
+        border-color: #9b5cff;
+        box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
+      }
 
-    .input::placeholder,
-    .textarea::placeholder{
-      color: #9e9e9e;
-    }
+      .input::placeholder,
+      .textarea::placeholder {
+        color: #9e9e9e;
+      }
 
-    .button.is-purple{
-      background: #8c52ff;
-      color: white;
-      border: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+      .button.is-purple {
+        background: #8c52ff;
+        color: white;
+        border: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
 
-    .button.is-purple:hover{
-      background: #a66cff;
-      transform: scale(1.02);
-    }
+      .button.is-purple:hover {
+        background: #a66cff;
+        transform: scale(1.02);
+      }
 
-    .icon{
-      color: #bb86fc;
-    }
+      .icon {
+        color: #bb86fc;
+      }
 
-    .box-info{
-      background: #242424;
-      border-radius: 15px;
-      padding: 20px;
-      margin-bottom: 30px;
-    }
+      .box-info {
+        background: #242424;
+        border-radius: 15px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
 
-    .info-text{
-      color: #d4d4d4;
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
+      .info-text {
+        color: #d4d4d4;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pedido-box">
+      <h1 class="title is-2">Pedidos</h1>
+      <p class="subtitle">Haz tu pedido de manera rápida y fácil!</p>
 
-  <div class="pedido-box">
+      <div class="box-info">
+        <p class="info-text">
+          Completa todos los datos para enviar tu pedido correctamente.
+        </p>
+      </div>
 
-    <h1 class="title is-2">Pedidos</h1>
-    <p class="subtitle">
-      Haz tu pedido de manera rápida y fácil!
-    </p>
-
-    <div class="box-info">
-      <p class="info-text">
-        Completa todos los datos para enviar tu pedido correctamente.
-      </p>
-    </div>
-
-    <form>
-
-      <div class="columns">
-
-        <!-- Columna izquierda -->
-        <div class="column">
-
-          <!-- Nombre -->
-          <div class="field">
-            <label class="label">Nombre del usuario</label>
-            <div class="control has-icons-left">
-              <input 
-                class="input" 
-                type="text" 
-                placeholder="Ingresa tu nombre"
-              >
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-user"></i>
-              </span>
+      <form>
+        <div class="columns">
+          <!-- Columna izquierda -->
+          <div class="column">
+            <!-- Nombre -->
+            <div class="field">
+              <label class="label">Nombre del usuario</label>
+              <div class="control has-icons-left">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Ingresa tu nombre"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-user"></i>
+                </span>
+              </div>
             </div>
-          </div>
 
-          <!-- Producto -->
-          <div class="field">
-            <label class="label">Producto</label>
-            <div class="control has-icons-left">
-              <input 
-                class="input" 
-                type="text" 
-                placeholder="Ej: Banana split"
-              >
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-utensils"></i>
-              </span>
+            <!-- Producto -->
+            <div class="field">
+              <label class="label">Producto</label>
+              <div class="control has-icons-left">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Ej: Banana split"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-utensils"></i>
+                </span>
+              </div>
             </div>
-          </div>
 
-          <!-- Cantidad -->
-          <div class="field">
-            <label class="label">Cantidad</label>
-            <div class="control has-icons-left">
-              <input 
-                class="input" 
-                type="number" 
-                placeholder="Cantidad"
-              >
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-hashtag"></i>
-              </span>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Columna derecha -->
-        <div class="column">
-
-          <!-- Dirección -->
-          <div class="field">
-            <label class="label">Dirección</label>
-            <div class="control has-icons-left">
-              <input 
-                class="input" 
-                type="text" 
-                placeholder="Ingresa tu dirección"
-              >
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-location-dot"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Teléfono -->
-          <div class="field">
-            <label class="label">Teléfono</label>
-            <div class="control has-icons-left">
-              <input 
-                class="input" 
-                type="tel" 
-                placeholder="Número telefónico"
-              >
-              <span class="icon is-small is-left">
-                <i class="fa-solid fa-phone"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Método de pago -->
-          <div class="field">
-            <label class="label">Método de pago</label>
-            <div class="control">
-              <div class="select is-fullwidth">
-                <select>
-                  <option>Selecciona un método</option>
-                  <option>Efectivo</option>
-                  <option>Tarjeta</option>
-                  <option>Transferencia</option>
-                  <option>Nequi</option>
-                </select>
+            <!-- Cantidad -->
+            <div class="field">
+              <label class="label">Cantidad</label>
+              <div class="control has-icons-left">
+                <input class="input" type="number" placeholder="Cantidad" />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-hashtag"></i>
+                </span>
               </div>
             </div>
           </div>
 
+          <!-- Columna derecha -->
+          <div class="column">
+            <!-- Dirección -->
+            <div class="field">
+              <label class="label">Dirección</label>
+              <div class="control has-icons-left">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Ingresa tu dirección"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-location-dot"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="field">
+              <label class="label">Teléfono</label>
+              <div class="control has-icons-left">
+                <input
+                  class="input"
+                  type="tel"
+                  placeholder="Número telefónico"
+                />
+                <span class="icon is-small is-left">
+                  <i class="fa-solid fa-phone"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- Método de pago -->
+            <div class="field">
+              <label class="label">Método de pago</label>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select>
+                    <option>Selecciona un método</option>
+                    <option>Efectivo</option>
+                    <option>Tarjeta</option>
+                    <option>Transferencia</option>
+                    <option>Nequi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-      </div>
-
-      <!-- Observaciones -->
-      <div class="field">
-        <label class="label">Observaciones</label>
-        <div class="control">
-          <textarea 
-            class="textarea" 
-            placeholder="Copia aqui como deseas que sea tu pedido..."
-          ></textarea>
+        <!-- Observaciones -->
+        <div class="field">
+          <label class="label">Observaciones</label>
+          <div class="control">
+            <textarea
+              class="textarea"
+              placeholder="Copia aqui como deseas que sea tu pedido..."
+            ></textarea>
+          </div>
         </div>
-      </div>
 
-      <!-- Botón -->
-      <div class="field mt-5">
-        <div class="control">
-          <button class="button is-purple is-fullwidth is-medium">
-            <i class="fa-solid fa-paper-plane mr-2"></i>
-            Enviar Pedido
-          </button>
+        <!-- Botón -->
+        <div class="field mt-5">
+          <div class="control">
+            <button class="button is-purple is-fullwidth is-medium">
+              <i class="fa-solid fa-paper-plane mr-2"></i>
+              Enviar Pedido
+            </button>
+          </div>
         </div>
-      </div>
+        <div style="display: flex; justify-content: center; margin-top: 20px">
+          <a
+            href="./index.html"
+            style="
+              background: #1f1f1f;
+              color: #ececec;
+              border: 1px solid #7c4dff;
+              border-radius: 12px;
+              font-weight: 600;
+              padding: 12px 22px;
+              text-decoration: none;
+              transition: 0.3s;
+              display: inline-flex;
+              align-items: center;
+            "
+          >
+            <i class="fa-solid fa-arrow-left" style="margin-right: 8px"></i>
 
-    </form>
-
-  </div>
-
-</body>
+            Volver al inicio
+          </a>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
