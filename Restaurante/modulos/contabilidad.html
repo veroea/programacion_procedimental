@@ -1,174 +1,166 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contabilidad</title>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
-     <style>
-    body{
-      background:#1b1b1b;
-      padding:40px;
-    }
+    <style>
+      body {
+        background: #1b1b1b;
+        padding: 40px;
+      }
 
-    .contenedor{
-      border:3px solid #5a4d97;
-      background:rgb(24, 24, 24);
-    }
+      .contenedor {
+        border: 3px solid #5a4d97;
+        background: rgb(24, 24, 24);
+      }
 
-    .titulo{
-      border-bottom:3px solid #000;
-      padding:15px;
-      font-weight:bold;
-      font-size:20px;
-    }
+      .titulo {
+        border-bottom: 3px solid #000;
+        padding: 15px;
+        font-weight: bold;
+        font-size: 20px;
+      }
 
-    .contenido{
-      display:flex;
-      gap:20px;
-      padding:20px;
-    }
+      .contenido {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+      }
 
-    /* Columna izquierda */
-    .izquierda{
-      width:25%;
-      border:2px solid #5a4d97;
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      justify-content:center;
-      gap:20px;
-    }
+      /* Columna izquierda */
+      .izquierda {
+        width: 25%;
+        border: 2px solid #5a4d97;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
 
-    .foto-usuario{
-      width:140px;
-      height:140px;
-      border:3px solid #5a4d97;
-      border-radius:50%;
-      object-fit:cover;
-    }
+      .foto-usuario {
+        width: 140px;
+        height: 140px;
+        border: 3px solid #5a4d97;
+        border-radius: 50%;
+        object-fit: cover;
+      }
 
-    /* Columna derecha */
-    .derecha{
-      width:75%;
-      border:2px solid #5a4d97;
-      padding:25px;
-    }
-  </style>
-</head>
-<body>
+      /* Columna derecha */
+      .derecha {
+        width: 75%;
+        border: 2px solid #5a4d97;
+        padding: 25px;
+      }
+    </style>
+  </head>
+  <body>
     <div class="container">
-  
-  <div class="contenedor">
+      <div class="contenedor">
+        
+        <div class="titulo">CONTABILIDAD</div>
 
-    <!-- Título -->
-    <div class="titulo">
-      CONTABILIDAD
-    </div>
+        
+        <div class="contenido">
+          
+          <div class="izquierda">
+            
+            <figure class="image">
+              <img
+                class="foto-usuario"
+                src="https://cdn-icons-png.flaticon.com/128/16792/16792585.png"
+                alt="Usuario"
+              />
+            </figure>
 
-    <!-- Contenido -->
-    <div class="contenido">
+            
+            <div class="field" style="width: 100%">
+              <label class="label">Usuario</label>
+              <div class="control">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Nombre del usuario"
+                />
+              </div>
+            </div>
+          </div>
 
-      <!-- Columna izquierda -->
-      <div class="izquierda">
+          
+          <div class="derecha">
+            <div class="columns is-multiline">
+              
+              <div class="column is-6">
+                <div class="field">
+                  <label class="label">Ventas</label>
+                  <div class="control">
+                    <input class="input" type="text" placeholder="Ventas" />
+                  </div>
+                </div>
+              </div>
 
-        <!-- Imagen usuario -->
-        <figure class="image">
-          <img 
-            class="foto-usuario"
-            src="https://cdn-icons-png.flaticon.com/128/16792/16792585.png"
-            alt="Usuario"
-          >
-        </figure>
+              
+              <div class="column is-6">
+                <div class="field">
+                  <label class="label">Fecha</label>
+                  <div class="control">
+                    <input class="input" type="date" />
+                  </div>
+                </div>
+              </div>
 
-        <!-- Nombre -->
-        <div class="field" style="width:100%;">
-          <label class="label">Usuario</label>
-          <div class="control">
-            <input class="input" type="text" placeholder="Nombre del usuario">
+              
+              <div class="column is-6">
+                <div class="field">
+                  <label class="label">Ingresos</label>
+                  <div class="control">
+                    <input class="input" type="number" placeholder="Ingresos" />
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="column is-6">
+                <div class="field">
+                  <label class="label">Egresos</label>
+                  <div class="control">
+                    <input class="input" type="number" placeholder="Egresos" />
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="column is-12">
+                <div class="field">
+                  <label class="label">Concepto</label>
+                  <div class="control">
+                    <textarea
+                      class="textarea"
+                      placeholder="Escribe el concepto"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              
+              <div class="column is-12">
+                <div class="field">
+                  <label class="label">Valor</label>
+                  <div class="control">
+                    <input class="input" type="number" placeholder="Valor" />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
       </div>
-
-      <!-- Columna derecha -->
-      <div class="derecha">
-
-        <div class="columns is-multiline">
-
-          <!-- Ventas -->
-          <div class="column is-6">
-            <div class="field">
-              <label class="label">Ventas</label>
-              <div class="control">
-                <input class="input" type="text" placeholder="Ventas">
-              </div>
-            </div>
-          </div>
-
-          <!-- Fecha -->
-          <div class="column is-6">
-            <div class="field">
-              <label class="label">Fecha</label>
-              <div class="control">
-                <input class="input" type="date">
-              </div>
-            </div>
-          </div>
-
-          <!-- Ingresos -->
-          <div class="column is-6">
-            <div class="field">
-              <label class="label">Ingresos</label>
-              <div class="control">
-                <input class="input" type="number" placeholder="Ingresos">
-              </div>
-            </div>
-          </div>
-
-          <!-- Egresos -->
-          <div class="column is-6">
-            <div class="field">
-              <label class="label">Egresos</label>
-              <div class="control">
-                <input class="input" type="number" placeholder="Egresos">
-              </div>
-            </div>
-          </div>
-
-          <!-- Concepto -->
-          <div class="column is-12">
-            <div class="field">
-              <label class="label">Concepto</label>
-              <div class="control">
-                <textarea class="textarea" placeholder="Escribe el concepto"></textarea>
-              </div>
-            </div>
-          </div>
-
-          <!-- Valor -->
-          <div class="column is-12">
-            <div class="field">
-              <label class="label">Valor</label>
-              <div class="control">
-                <input class="input" type="number" placeholder="Valor">
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </div>
-
-  </div>
-
-</div>
-    
-</body>
+  </body>
 </html>
