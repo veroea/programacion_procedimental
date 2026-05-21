@@ -3,190 +3,395 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- BULMA -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
+
+    <!-- ICONOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
     <title>Formulario de usuario</title>
+
     <style>
       body {
-        background: #242424;
+        background: #0f0f0f;
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: 30px;
+        font-family: "Segoe UI", sans-serif;
       }
 
-      .panel {
-        width: 350px;
-        border-radius: 12px;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        padding: 15px;
+      .contenedor {
+        width: 100%;
+        max-width: 950px;
+        background: #1b1b1b;
+        border-radius: 20px;
+        border: 1px solid #7c4dff;
+        box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
+        overflow: hidden;
       }
 
-      .panel-heading {
+      .titulo {
         text-align: center;
-        border-radius: 8px;
+        padding: 25px;
+        font-size: 32px;
+        font-weight: bold;
+        color: #bb86fc;
+        border-bottom: 1px solid #2f2f2f;
       }
 
-      .control {
-        margin-bottom: 15px;
+      .subtitulo {
+        text-align: center;
+        color: #b5b5b5;
+        margin-top: -10px;
+        margin-bottom: 25px;
       }
 
-      .control p {
+      .contenido {
+        display: flex;
+        gap: 20px;
+        padding: 25px;
+      }
+
+      /* COLUMNA IZQUIERDA */
+      .izquierda {
+        width: 30%;
+        background: #242424;
+        border: 1px solid #383838;
+        border-radius: 18px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+      }
+
+      .foto-usuario {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 3px solid #8c52ff;
+        padding: 10px;
+        background: #1b1b1b;
+        object-fit: cover;
+      }
+
+      /* COLUMNA DERECHA */
+      .derecha {
+        width: 70%;
+        background: #242424;
+        border: 1px solid #383838;
+        border-radius: 18px;
+        padding: 30px;
+      }
+
+      .label {
+        color: #ececec;
         font-weight: 600;
-        margin-bottom: 5px;
       }
 
-      input {
-        border-radius: 8px !important;
+      .input,
+      .select select {
+        background: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        color: white;
+        transition: 0.3s;
+      }
+
+      .input::placeholder {
+        color: #9e9e9e;
+      }
+
+      .input:focus,
+      .select select:focus {
+        border-color: #9b5cff;
+        box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
+      }
+
+      .icon {
+        color: #bb86fc;
+      }
+
+      .botones {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .button.is-purple {
+        background: #8c52ff;
+        color: white;
+        border: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .button.is-purple:hover {
+        background: #a66cff;
+        transform: scale(1.02);
+      }
+
+      .button.is-dark-custom {
+        background: #2c2c2c;
+        color: white;
+        border: 1px solid #444;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .button.is-dark-custom:hover {
+        background: #3a3a3a;
+      }
+
+      @media screen and (max-width: 768px) {
+        .contenido {
+          flex-direction: column;
+        }
+
+        .izquierda,
+        .derecha {
+          width: 100%;
+        }
+
+        .botones {
+          flex-direction: column;
+        }
       }
     </style>
   </head>
+
   <body>
-    <article class="panel is-link">
-      <p class="panel-heading">Registro</p>
-      <div class="field">
-        <label class="label">Nombre</label>
-        <div class="control">
-          <input
-            class="input is-focused"
-            type="text"
-            placeholder="Nombre..."
-          />
-        </div>
-      </div>
-      <br /><br />
+    <div class="contenedor">
+      <!-- TITULO -->
+      <div class="titulo">👤 REGISTRO DE USUARIO</div>
 
-      <div class="field">
-        <label class="label">Apellido</label>
-        <div class="control">
-          <input
-            class="input is-focused"
-            type="text"
-            placeholder="Apellido..."
-          />
-        </div>
-      </div>
-      <br /><br />
+      <p class="subtitulo">Completa la información del usuario</p>
 
-      <div class="field">
-        <label class="label">Tipo de documento</label>
-        <div class="control">
-          <div class="select">
-            <select>
-              <option>Cédula</option>
-              <option>Tarjeta de identidad</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <br /><br />
-
-      <div class="field">
-        <div class="control">
-          <label class="label">Número de documento</label>
-          <input
-            class="input is-focused"
-            type="number"
-            placeholder="Documento..."
-          />
-        </div>
-      </div>
-      <br /><br />
-
-      <div class="field">
-        <div class="control">
-          <label class="label">Número de telefono</label>
-          <input
-            class="input is-focused"
-            type="number"
-            placeholder="Telefono..."
-          />
-        </div>
-      </div>
-      <br /><br />
-
-      <div class="field">
-        <div class="control">
-          <label class="label">Email</label>
-          <div class="control has-icons-left has-icons-right">
-            <input
-              class="input is-focused"
-              type="text"
-              placeholder="@..."
+      <div class="contenido">
+        <!-- IZQUIERDA -->
+        <div class="izquierda">
+          <figure class="image">
+            <img
+              class="foto-usuario"
+              src="https://cdn-icons-png.flaticon.com/128/16792/16792585.png"
+              alt="Usuario"
             />
-            <span class="icon is-small is-left">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <span class="icon is-small is-right">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
+          </figure>
+
+          <div class="field" style="width: 100%">
+            <label class="label">Nombre</label>
+
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="Nombre..." />
+
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-user"></i>
+              </span>
+            </div>
           </div>
-          <p class="help is-danger"></p>
-        </div>
-      </div>
-      <br /><br />
 
-      <div class="field">
-        <div class="control">
-          <label class="label">Genero</label>
+          <div class="field" style="width: 100%">
+            <label class="label">Apellido</label>
 
-          <div class="select">
-            <select>
-              <option>Femenino</option>
-              <option>Masculino</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <br /><br />
+            <div class="control has-icons-left">
+              <input class="input" type="text" placeholder="Apellido..." />
 
-      <div class="field">
-        <label class="label">Cargo</label>
-        <div class="control">
-          <div class="select">
-            <select>
-              <option>Usuario</option>
-              <option>Administrador</option>
-              <option>Otro</option>
-            </select>
+              <span class="icon is-small is-left">
+                <i class="fa-solid fa-user-tag"></i>
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-      <br /><br />
 
-      <div class="field">
-        <label class="label">Fecha de nacimiento</label>
-        <input
-          class="input is-focused"
-          type="date"
-          placeholder="Fecha..."
-        />
-      </div>
-      <br /><br />
+        <!-- DERECHA -->
+        <div class="derecha">
+          <div class="columns is-multiline">
+            <!-- TIPO DOCUMENTO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Tipo de documento</label>
 
-      <div class="field">
-        <label class="label">Contraseña</label>
-        <input
-          class="input is-focused"
-          type="number"
-          placeholder="Contraseña..."
-        />
-      </div>
-      <br /><br />
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Cédula</option>
+                      <option>Tarjeta de identidad</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link">Enviar</button>
+            <!-- DOCUMENTO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Número de documento</label>
+
+                <div class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder="Documento..."
+                  />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-id-card"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- TELEFONO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Número de teléfono</label>
+
+                <div class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="number"
+                    placeholder="Telefono..."
+                  />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Email</label>
+
+                <div class="control has-icons-left">
+                  <input class="input" type="email" placeholder="@..." />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-envelope"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- GENERO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Genero</label>
+
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Femenino</option>
+                      <option>Masculino</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CARGO -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Cargo</label>
+
+                <div class="control">
+                  <div class="select is-fullwidth">
+                    <select>
+                      <option>Usuario</option>
+                      <option>Administrador</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- FECHA -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Fecha de nacimiento</label>
+
+                <div class="control has-icons-left">
+                  <input class="input" type="date" />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-calendar"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CONTRASEÑA -->
+            <div class="column is-6">
+              <div class="field">
+                <label class="label">Contraseña</label>
+
+                <div class="control has-icons-left">
+                  <input
+                    class="input"
+                    type="password"
+                    placeholder="Contraseña..."
+                  />
+
+                  <span class="icon is-small is-left">
+                    <i class="fa-solid fa-lock"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- BOTONES -->
+            <div class="column is-12">
+              <div class="botones">
+                <button class="button is-purple is-fullwidth">
+                  <i class="fa-solid fa-paper-plane mr-2"></i>
+                  Enviar
+                </button>
+
+                <button class="button is-dark-custom is-fullwidth">
+                  <i class="fa-solid fa-xmark mr-2"></i>
+                  Cancelar
+                </button>
+              </div>
+            </div>
+            <div
+              style="display: flex; justify-content: center; margin-top: 20px"
+            >
+              <a
+                href="../index.html"
+                style="
+                  background: #1f1f1f;
+                  color: #ececec;
+                  border: 1px solid #7c4dff;
+                  border-radius: 12px;
+                  font-weight: 600;
+                  padding: 12px 22px;
+                  text-decoration: none;
+                  transition: 0.3s;
+                  display: inline-flex;
+                  align-items: center;
+                "
+              >
+                <i class="fa-solid fa-arrow-left" style="margin-right: 8px"></i>
+
+                Volver al inicio
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="control">
-          <button class="button is-link">Cancelar</button>
-        </div>
       </div>
-      <br /><br />
-    </article>
+    </div>
   </body>
 </html>
