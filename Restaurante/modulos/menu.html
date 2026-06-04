@@ -1,8 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
 <!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
 
     <!-- BULMA -->
     <link
@@ -19,6 +27,185 @@
     <title>Menú</title>
 
     <style>
+
+        body{
+            background: #0f0f0f;
+            min-height: 100vh;
+            padding: 40px;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .contenedor{
+            background: #1b1b1b;
+            border: 1px solid #7c4dff;
+            border-radius: 20px;
+            box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
+            padding: 35px;
+        }
+
+        .titulo{
+            text-align: center;
+            font-size: 38px;
+            font-weight: bold;
+            color: #bb86fc;
+            margin-bottom: 10px;
+        }
+
+        .subtitulo{
+            text-align: center;
+            color: #b5b5b5;
+            margin-bottom: 40px;
+        }
+
+        .card{
+            background: #242424;
+            border: 1px solid #383838;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 20px rgba(140, 82, 255, 0.3);
+            border-color: #8c52ff;
+        }
+
+        .card-content{
+            padding: 25px;
+        }
+
+        .image img{
+            border-radius: 15px;
+            object-fit: cover;
+            border: 2px solid #8c52ff;
+        }
+
+        .title{
+            color: #ececec !important;
+            margin-bottom: 12px !important;
+        }
+
+        .subtitle{
+            color: #b5b5b5 !important;
+            line-height: 1.6;
+        }
+
+        .icono{
+            color: #bb86fc;
+            margin-right: 8px;
+        }
+
+        @media screen and (max-width: 768px){
+
+            .media{
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .media-left{
+                margin-right: 0 !important;
+                margin-bottom: 20px;
+            }
+
+            .image{
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- TITULO -->
+        <h1 class="titulo">
+            🍴 MENÚ DEL RESTAURANTE
+        </h1>
+
+        <p class="subtitulo">
+            Sabores dulces que iluminan cada momento
+        </p>
+
+        <!-- FILA 1 -->
+        <div class="columns">
+
+            <!-- TORTAS -->
+            <div class="column">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img
+                                      src="https://img77.uenicdn.com/image/upload/v1634085982/business/c81b18f2-d87d-4f41-8ca1-bf9de7da45c8.jpg"
+                                      alt="Tortas"
+                                    />
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-cake-candles icono"></i>
+                                    Tortas
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Tortas especiales y decoradas con diferentes sabores y coberturas.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- POSTRES -->
+            <div class="column">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img
+                                      src="https://i.ytimg.com/vi/2_FUW8y2J1M/maxresdefault.jpg"
+                                      alt="Postres"
+                                    />
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-cookie-bite icono"></i>
+                                    Postres
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Postres deliciosos y suaves, que te endulzan el día.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+=======
+>>>>>>> modify_module_inventario
       body {
         background: #0f0f0f;
         min-height: 100vh;
@@ -263,10 +450,99 @@
                   </p>
                 </div>
               </div>
+>>>>>>> main
             </div>
-          </div>
+
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        <!-- FILA 2 -->
+        <div class="columns">
+
+            <!-- HELADOS -->
+            <div class="column">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img
+                                      src="https://thumbs.dreamstime.com/b/deliciosos-helados-con-fresas-una-tentadora-helader%C3%ADa-ingredientes-en-el-sundae-se-pueden-degustar-copas-de-vainilla-y-helado-393263312.jpg"
+                                      alt="Helados"
+                                    />
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-ice-cream icono"></i>
+                                    Helados
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Helados refrescantes y cremosos que te harán enamorarte.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- BEBIDAS -->
+            <div class="column">
+                <div class="card">
+
+                    <div class="card-content">
+
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img
+                                      src="https://media.gq.com.mx/photos/5be9e36cba170ce605cfda8c/4:3/w_1600,h_1200,c_limit/malteadas_9603.jpg"
+                                      alt="Bebidas"
+                                    />
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-mug-straw icono"></i>
+                                    Bebidas
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Malteadas que refrescan tu vida con sabores cada día.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+=======
+>>>>>>> modify_module_inventario
         <!-- BEBIDAS -->
 
         <div class="column">
@@ -310,3 +586,7 @@
     </div>
   </body>
 </html>
+<<<<<<< HEAD
+=======
+>>>>>>> main
+>>>>>>> modify_module_inventario

@@ -1,3 +1,4 @@
+console.log("Hola mundo");
 let nombre = document.getElementByName("nombre").value;
 let apellido = document.getElementByName("apellido").value;
 let tipoDocumento = document.getElementByName("tipoDocumento").value;
