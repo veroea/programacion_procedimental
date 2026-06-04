@@ -188,6 +188,7 @@
                 <input
                   class="input"
                   type="text"
+                  id="nombre"
                   placeholder="Nombre del usuario"
                 />
 
@@ -210,6 +211,7 @@
                     <input
                       class="input"
                       type="text"
+                      id="ventas"
                       placeholder="Ventas realizadas"
                     />
 
@@ -226,7 +228,7 @@
                   <label class="label">Fecha</label>
 
                   <div class="control has-icons-left">
-                    <input class="input" type="date" />
+                    <input class="input" type="date" id="fecha" />
 
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-calendar"></i>
@@ -241,7 +243,7 @@
                   <label class="label">Ingresos</label>
 
                   <div class="control has-icons-left">
-                    <input class="input" type="number" placeholder="Ingresos" />
+                    <input class="input" type="number" id="ingresos" placeholder="Ingresos" />
 
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-arrow-trend-up"></i>
@@ -256,7 +258,7 @@
                   <label class="label">Egresos</label>
 
                   <div class="control has-icons-left">
-                    <input class="input" type="number" placeholder="Egresos" />
+                    <input class="input" type="number" id="egresos" placeholder="Egresos" />
 
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-arrow-trend-down"></i>
@@ -273,6 +275,7 @@
                   <div class="control">
                     <textarea
                       class="textarea"
+                      id="conceptos"
                       placeholder="Escribe el concepto"
                     ></textarea>
                   </div>
@@ -288,6 +291,7 @@
                     <input
                       class="input"
                       type="number"
+                      id="valor"
                       placeholder="Valor total"
                     />
 
@@ -343,5 +347,6 @@
         </div>
       </div>
     </div>
+    <script src = "../js/contabilidad.js"></script>
   </body>
 </html>
