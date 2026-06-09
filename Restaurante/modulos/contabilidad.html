@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
-    <link rel="stylesheet" href="/css/contabilidad.css"/>
+    <link rel="stylesheet" href="/css/contabilidad.css" />
 
     <!-- ICONOS -->
     <link
@@ -84,8 +84,6 @@
 
                   <div class="control has-icons-left">
                     <input class="input" type="date" id="fecha" />
-                    <input class="input" type="date" />
-                    <input class="input" type="date" />
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-calendar"></i>
                     </span>
@@ -99,10 +97,12 @@
                   <label class="label">Ingresos</label>
 
                   <div class="control has-icons-left">
-
-                    <input class="input" type="number" id="ingresos" placeholder="Ingresos" />
-                    <input class="input" type="number" placeholder="Ingresos" />
-                    <input class="input" type="number" placeholder="Ingresos" />
+                    <input
+                      class="input"
+                      type="number"
+                      id="ingresos"
+                      placeholder="Ingresos"
+                    />
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-arrow-trend-up"></i>
                     </span>
@@ -116,9 +116,12 @@
                   <label class="label">Egresos</label>
 
                   <div class="control has-icons-left">
-                    <input class="input" type="number" id="egresos" placeholder="Egresos" />
-                    <input class="input" type="number" placeholder="Egresos" />
-                    <input class="input" type="number" placeholder="Egresos" />
+                    <input
+                      class="input"
+                      type="number"
+                      id="egresos"
+                      placeholder="Egresos"
+                    />
                     <span class="icon is-small is-left">
                       <i class="fa-solid fa-arrow-trend-down"></i>
                     </span>
@@ -178,13 +181,7 @@
               <div
                 style="display: flex; justify-content: center; margin-top: 20px"
               >
-                <a
-                  href="../index.html">
-                  <i
-                    class="fa-solid fa-arrow-left"
-                    style="margin-right: 8px"
-                  ></i>
-
+                <a href="../index.html" class="btn-volver">
                   Volver al inicio
                 </a>
               </div>
@@ -193,6 +190,6 @@
         </div>
       </div>
     </div>
-    <script src = "../js/contabilidad.js"></script>
+    <script src="../js/contabilidad.js"></script>
   </body>
 </html>
