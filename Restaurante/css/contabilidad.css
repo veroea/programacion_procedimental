@@ -1,0 +1,155 @@
+body {
+  background: #0f0f0f;
+  padding: 40px;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.contenedor {
+  border: 1px solid #7c4dff;
+  background: #1b1b1b;
+  border-radius: 20px;
+  box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
+  overflow: hidden;
+}
+
+.titulo {
+  border-bottom: 1px solid #2f2f2f;
+  padding: 25px;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
+  color: #bb86fc;
+}
+
+.subtitulo {
+  text-align: center;
+  color: #b5b5b5;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.contenido {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+}
+
+/* Columna izquierda */
+.izquierda {
+  width: 25%;
+  border: 1px solid #383838;
+  background: #242424;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.foto-usuario {
+  width: 140px;
+  height: 140px;
+  border: 3px solid #8c52ff;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 10px;
+  background: #1b1b1b;
+}
+
+/* Columna derecha */
+.derecha {
+  width: 75%;
+  border: 1px solid #383838;
+  background: #242424;
+  border-radius: 18px;
+  padding: 30px;
+}
+
+.label {
+  color: #ececec;
+  font-weight: 600;
+}
+
+.input,
+.textarea {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: white;
+  transition: 0.3s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #9e9e9e;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
+}
+
+.icon {
+  color: #bb86fc;
+}
+
+.botones {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.button.is-purple {
+  background: #8c52ff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button.is-purple:hover {
+  background: #a66cff;
+  transform: scale(1.02);
+}
+
+.button.is-dark-custom {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button.is-dark-custom:hover {
+  background: #3a3a3a;
+}
+.btn-volver {
+    background: #1f1f1f;
+    color: #ececec;
+    border: 1px solid #7c4dff;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 22px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+
+@media screen and (max-width: 768px) {
+  .contenido {
+    flex-direction: column;
+  }
+
+  .izquierda,
+  .derecha {
+    width: 100%;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+}
