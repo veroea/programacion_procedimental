@@ -128,6 +128,18 @@ body {
 .button.is-dark-custom:hover {
   background: #3a3a3a;
 }
+.btn-volver {
+    background: #1f1f1f;
+    color: #ececec;
+    border: 1px solid #7c4dff;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 22px;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
 
 @media screen and (max-width: 768px) {
   .contenido {
@@ -141,17 +153,5 @@ body {
 
   .botones {
     flex-direction: column;
-  }
-  .btn-volver {
-    background: #1f1f1f;
-    color: #ececec;
-    border: 1px solid #7c4dff;
-    border-radius: 12px;
-    font-weight: 600;
-    padding: 12px 22px;
-    text-decoration: none;
-    transition: 0.3s;
-    display: inline-flex;
-    align-items: center;
   }
 }
