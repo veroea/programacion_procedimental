@@ -10,20 +10,15 @@ function ValidarDatos(){
     else{
         if (codigoProducto != /[^\d+{1,6}$]/){
             alert('Este campo solo acepta números')
-            return false;
         }
         if (nombreProducto != /[a-zA-Z]/){
             alert('Este campo no acepta números')
-            return false;
         }
         if (cantidad != /[^\d+$]/){
             alert('Este campo solo acepta números')
-            return false;
         }
         if (marcaProducto !=/[a-zA-Z]/){
             alert('Este campo no acepta números')
-            return false;
         }
-        return true;
     }
 }

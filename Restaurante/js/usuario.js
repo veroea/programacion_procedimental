@@ -23,24 +23,18 @@ function ValidarDatos() {
   } else {
     if (nombre != /[a-zA-Z]/) {
       alert("Este campo no acepta números");
-      return false;
     }
     if (apellido != /[a-zA-Z]/) {
       alert("Este campo no acepta números");
-      return false;
     }
     if (numeroDocumento != /[^\d+$]/) {
       alert("Este campo solo acepta números");
-      return false;
     }
     if (telefono != /[^\d{1,10}$]/) {
       alert("Este campo solo acepta números y solo se permiten 10 digitos");
-      return false;
     }
     if (correo != include("@")) {
       alert("Este campo debe incluir @");
-      return false;
     }
-    return true;
   }
 }

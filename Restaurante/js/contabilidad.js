@@ -13,24 +13,18 @@ function ValidarDatos() {
     else{
         if (nombre == ""){
         alert("El campo está vacío");
-        return false;
         }
         if (ventas != /[^\d+$]/){
             alert('Este campo solo acepta números')
-            return false;
         }
         if (ingresos != /[^\d+$]/) {
             alert('Este campo solo acepta números')
-            return false;
         }
         if (egresos != /[^\d+$]/){
             alert('Este campo solo acepta números')
-            return false;
         }
         if (valor != /[^\d+$]/){
             alert('Este campo solo acepta números')
-            return false;
         }
-        return true;
     }
 }
