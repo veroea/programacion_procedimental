@@ -173,3 +173,7 @@
     display: inline-flex;
     align-items: center;
   }
+  .btn-volver:hover {
+    background: #a66cff;
+    color: white;
+}

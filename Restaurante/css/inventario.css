@@ -140,6 +140,10 @@ body {
     display: inline-flex;
     align-items: center;
   }
+  .btn-volver:hover {
+    background: #a66cff;
+    color: white;
+}
 
 @media screen and (max-width: 768px) {
   .contenido {
