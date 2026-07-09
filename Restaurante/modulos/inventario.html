@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
     />
+    <link rel="stylesheet" href="/css/inventario.css" />
 
     <!-- ICONOS -->
     <link
@@ -17,154 +18,6 @@
     />
 
     <title>Inventario</title>
-
-    <style>
-      body {
-        background: #0f0f0f;
-        min-height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 30px;
-        font-family: "Segoe UI", sans-serif;
-      }
-
-      .contenedor {
-        width: 100%;
-        max-width: 900px;
-        background: #1b1b1b;
-        border-radius: 20px;
-        border: 1px solid #7c4dff;
-        box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
-        overflow: hidden;
-      }
-
-      .titulo {
-        text-align: center;
-        padding: 25px;
-        font-size: 34px;
-        font-weight: bold;
-        color: #bb86fc;
-        border-bottom: 1px solid #2f2f2f;
-      }
-
-      .subtitulo {
-        text-align: center;
-        color: #b5b5b5;
-        margin-top: -10px;
-        margin-bottom: 25px;
-      }
-
-      .contenido {
-        display: flex;
-        gap: 20px;
-        padding: 25px;
-      }
-
-      /* IZQUIERDA */
-      .izquierda {
-        width: 30%;
-        background: #242424;
-        border: 1px solid #383838;
-        border-radius: 18px;
-        padding: 25px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 25px;
-      }
-
-      .imagen-producto {
-        width: 160px;
-        height: 160px;
-        border-radius: 20px;
-        border: 3px solid #8c52ff;
-        padding: 12px;
-        background: #1b1b1b;
-        object-fit: cover;
-      }
-
-      /* DERECHA */
-      .derecha {
-        width: 70%;
-        background: #242424;
-        border: 1px solid #383838;
-        border-radius: 18px;
-        padding: 30px;
-      }
-
-      .label {
-        color: #ececec;
-        font-weight: 600;
-      }
-
-      .input {
-        background: #2a2a2a;
-        border: 1px solid #3a3a3a;
-        color: white;
-        transition: 0.3s;
-      }
-
-      .input::placeholder {
-        color: #9e9e9e;
-      }
-
-      .input:focus {
-        border-color: #9b5cff;
-        box-shadow: 0 0 8px rgba(155, 92, 255, 0.5);
-      }
-
-      .icon {
-        color: #bb86fc;
-      }
-
-      .botones {
-        display: flex;
-        gap: 15px;
-        margin-top: 20px;
-      }
-
-      .button.is-purple {
-        background: #8c52ff;
-        color: white;
-        border: none;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-
-      .button.is-purple:hover {
-        background: #a66cff;
-        transform: scale(1.02);
-      }
-
-      .button.is-dark-custom {
-        background: #2c2c2c;
-        color: white;
-        border: 1px solid #444;
-        font-weight: bold;
-        transition: 0.3s;
-      }
-
-      .button.is-dark-custom:hover {
-        background: #3a3a3a;
-      }
-
-      @media screen and (max-width: 768px) {
-        .contenido {
-          flex-direction: column;
-        }
-
-        .izquierda,
-        .derecha {
-          width: 100%;
-        }
-
-        .botones {
-          flex-direction: column;
-        }
-      }
-    </style>
   </head>
 
   <body>
@@ -202,8 +55,12 @@
                 <label class="label"> Codigo del producto </label>
 
                 <div class="control has-icons-left">
-                  <input class="input" type="number" placeholder="Codigo..." />
-
+                  <input
+                    class="input"
+                    type="number"
+                    id="codigoProducto"
+                    placeholder="Codigo..."
+                  />
                   <span class="icon is-small is-left">
                     <i class="fa-solid fa-barcode"></i>
                   </span>
@@ -217,7 +74,12 @@
                 <label class="label"> Nombre del producto </label>
 
                 <div class="control has-icons-left">
-                  <input class="input" type="text" placeholder="Nombre..." />
+                  <input
+                    class="input"
+                    type="text"
+                    id="nombreProducto"
+                    placeholder="Nombre..."
+                  />
 
                   <span class="icon is-small is-left">
                     <i class="fa-solid fa-box"></i>
@@ -232,11 +94,7 @@
                 <label class="label"> Cantidad </label>
 
                 <div class="control has-icons-left">
-                  <input
-                    class="input"
-                    type="number"
-                    placeholder="Cantidad..."
-                  />
+                  <input class="input" type="number" id="cantidad" />
 
                   <span class="icon is-small is-left">
                     <i class="fa-solid fa-layer-group"></i>
@@ -251,7 +109,12 @@
                 <label class="label"> Marca del producto </label>
 
                 <div class="control has-icons-left">
-                  <input class="input" type="text" placeholder="Marca..." />
+                  <input
+                    class="input"
+                    type="text"
+                    id="marcaProducto"
+                    placeholder="Marca..."
+                  />
 
                   <span class="icon is-small is-left">
                     <i class="fa-solid fa-tags"></i>
@@ -277,29 +140,13 @@
             <div
               style="display: flex; justify-content: center; margin-top: 20px"
             >
-              <a
-                href="../index.html"
-                style="
-                  background: #1f1f1f;
-                  color: #ececec;
-                  border: 1px solid #7c4dff;
-                  border-radius: 12px;
-                  font-weight: 600;
-                  padding: 12px 22px;
-                  text-decoration: none;
-                  transition: 0.3s;
-                  display: inline-flex;
-                  align-items: center;
-                "
-              >
-                <i class="fa-solid fa-arrow-left" style="margin-right: 8px"></i>
-
-                Volver al inicio
-              </a>
+              <a href="../index.html" class="btn-volver"> Volver al inicio </a>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="../js/inventario.js"></script>
   </body>
 </html>

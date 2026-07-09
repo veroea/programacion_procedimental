@@ -1,312 +1,161 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- BULMA -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/menu.css">
 
     <!-- ICONOS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <title>Menú</title>
+</head>
 
-    <style>
-      body {
-        background: #0f0f0f;
-        min-height: 100vh;
-        padding: 40px;
-        font-family: "Segoe UI", sans-serif;
-      }
+<body>
 
-      /* CONTENEDOR */
-
-      .contenedor {
-        background: #1b1b1b;
-        border: 1px solid #7c4dff;
-
-        border-radius: 20px;
-
-        box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25);
-
-        padding: 35px;
-
-        max-width: 1200px;
-        margin: auto;
-      }
-
-      /* TITULOS */
-
-      .titulo {
-        text-align: center;
-
-        color: #bb86fc;
-
-        font-size: 40px;
-
-        font-weight: bold;
-
-        margin-bottom: 10px;
-      }
-
-      .subtitulo {
-        text-align: center;
-
-        color: #b5b5b5;
-
-        margin-bottom: 40px;
-      }
-
-      /* TARJETAS */
-
-      .card {
-        background: #242424;
-
-        border: 1px solid #383838;
-
-        border-radius: 18px;
-
-        transition: 0.3s;
-
-        height: 100%;
-      }
-
-      .card:hover {
-        transform: translateY(-6px);
-
-        border-color: #8c52ff;
-
-        box-shadow: 0 0 20px rgba(140, 82, 255, 0.3);
-      }
-
-      .image img {
-        border-radius: 15px;
-
-        border: 2px solid #8c52ff;
-
-        object-fit: cover;
-      }
-
-      .title {
-        color: #ececec !important;
-      }
-
-      .subtitle {
-        color: #b5b5b5 !important;
-
-        line-height: 1.7;
-      }
-
-      .icono {
-        color: #bb86fc;
-
-        margin-right: 8px;
-      }
-
-      /* BOTON */
-
-      .volver {
-        display: flex;
-
-        justify-content: center;
-
-        margin-top: 40px;
-      }
-
-      .boton {
-        background: #1f1f1f;
-
-        color: #ececec;
-
-        border: 1px solid #7c4dff;
-
-        border-radius: 12px;
-
-        padding: 14px 25px;
-
-        text-decoration: none;
-
-        transition: 0.3s;
-      }
-
-      .boton:hover {
-        background: #8c52ff;
-
-        box-shadow: 0 0 15px rgba(140, 82, 255, 0.4);
-      }
-
-      @media (max-width: 768px) {
-        .media {
-          flex-direction: column;
-
-          text-align: center;
-        }
-
-        .media-left {
-          margin-right: 0 !important;
-          margin-bottom: 20px;
-        }
-      }
-    </style>
-  </head>
-
-  <body>
     <div class="contenedor">
-      <!-- TITULO -->
 
-      <h1 class="titulo">MENÚ VERA BAKERY</h1>
+        <!-- TITULO -->
+        <h1 class="titulo">MENÚ VERA BAKERY</h1>
 
-      <p class="subtitulo">
-        Sabores dulces creados para convertir momentos en recuerdos
-      </p>
+        <p class="subtitulo">
+            Sabores dulces creados para convertir momentos en recuerdos
+        </p>
 
-      <!-- FILA 1 -->
+        <!-- FILA 1 -->
+        <div class="columns">
 
-      <div class="columns">
-        <!-- TORTAS -->
+            <!-- TORTAS -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
 
-        <div class="column">
-          <div class="card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-128x128">
-                    <img
-                      src="https://img77.uenicdn.com/image/upload/v1634085982/business/c81b18f2-d87d-4f41-8ca1-bf9de7da45c8.jpg"
-                    />
-                  </figure>
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img src="https://img77.uenicdn.com/image/upload/v1634085982/business/c81b18f2-d87d-4f41-8ca1-bf9de7da45c8.jpg" alt="Tortas">
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-cake-candles icono"></i>
+                                    Tortas
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Tortas especiales decoradas con sabores únicos y coberturas artesanales.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="media-content">
-                  <p class="title is-4">
-                    <i class="fa-solid fa-cake-candles icono"></i>
-
-                    Tortas
-                  </p>
-
-                  <p class="subtitle is-6">
-                    Tortas especiales decoradas con sabores únicos y coberturas
-                    artesanales.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
+
+            <!-- POSTRES -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img src="https://i.ytimg.com/vi/2_FUW8y2J1M/maxresdefault.jpg" alt="Postres">
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-cookie-bite icono"></i>
+                                    Postres
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Postres suaves y deliciosos preparados para endulzar cada día.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <!-- POSTRES -->
+        <!-- FILA 2 -->
+        <div class="columns">
 
-        <div class="column">
-          <div class="card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-128x128">
-                    <img
-                      src="https://i.ytimg.com/vi/2_FUW8y2J1M/maxresdefault.jpg"
-                    />
-                  </figure>
+            <!-- HELADOS -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
+
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img src="https://thumbs.dreamstime.com/b/deliciosos-helados-con-fresas-una-tentadora-helader%C3%ADa-ingredientes-en-el-sundae-se-pueden-degustar-copas-de-vainilla-y-helado-393263312.jpg" alt="Helados">
+                                </figure>
+                            </div>
+
+                            <div class="media-content">
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-ice-cream icono"></i>
+                                    Helados
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Helados cremosos y refrescantes que enamoran desde el primer sabor.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="media-content">
-                  <p class="title is-4">
-                    <i class="fa-solid fa-cookie-bite icono"></i>
-
-                    Postres
-                  </p>
-
-                  <p class="subtitle is-6">
-                    Postres suaves y deliciosos preparados para endulzar cada
-                    día.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- FILA 2 -->
+            <!-- BEBIDAS -->
+            <div class="column">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="media">
 
-      <div class="columns">
-        <!-- HELADOS -->
+                            <div class="media-left">
+                                <figure class="image is-128x128">
+                                    <img src="https://media.gq.com.mx/photos/5be9e36cba170ce605cfda8c/4:3/w_1600,h_1200,c_limit/malteadas_9603.jpg" alt="Bebidas">
+                                </figure>
+                            </div>
 
-        <div class="column">
-          <div class="card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-128x128">
-                    <img
-                      src="https://thumbs.dreamstime.com/b/deliciosos-helados-con-fresas-una-tentadora-helader%C3%ADa-ingredientes-en-el-sundae-se-pueden-degustar-copas-de-vainilla-y-helado-393263312.jpg"
-                    />
-                  </figure>
+                            <div class="media-content">
+                                <p class="title is-4">
+                                    <i class="fa-solid fa-mug-hot icono"></i>
+                                    Bebidas
+                                </p>
+
+                                <p class="subtitle is-6">
+                                    Malteadas y bebidas dulces que acompañan cualquier momento.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-
-                <div class="media-content">
-                  <p class="title is-4">
-                    <i class="fa-solid fa-ice-cream icono"></i>
-
-                    Helados
-                  </p>
-
-                  <p class="subtitle is-6">
-                    Helados cremosos y refrescantes que enamoran desde el primer
-                    sabor.
-                  </p>
-                </div>
-              </div>
             </div>
-          </div>
+
         </div>
 
-        <!-- BEBIDAS -->
-
-        <div class="column">
-          <div class="card">
-            <div class="card-content">
-              <div class="media">
-                <div class="media-left">
-                  <figure class="image is-128x128">
-                    <img
-                      src="https://media.gq.com.mx/photos/5be9e36cba170ce605cfda8c/4:3/w_1600,h_1200,c_limit/malteadas_9603.jpg"
-                    />
-                  </figure>
-                </div>
-
-                <div class="media-content">
-                  <p class="title is-4">
-                    <i class="fa-solid fa-mug-hot icono"></i>
-
-                    Bebidas
-                  </p>
-
-                  <p class="subtitle is-6">
-                    Malteadas y bebidas dulces que acompañan cualquier momento.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- BOTON VOLVER -->
+        <div class="volver">
+            <a href="../index.html" class="btn-volver">
+                Volver al inicio
+            </a>
         </div>
-      </div>
 
-      <!-- BOTON VOLVER -->
-
-      <div class="volver">
-        <a href="../index.html" class="boton">
-          <i class="fa-solid fa-arrow-left"></i>
-
-          &nbsp; Volver al inicio
-        </a>
-      </div>
     </div>
-  </body>
+
+</body>
 </html>
+

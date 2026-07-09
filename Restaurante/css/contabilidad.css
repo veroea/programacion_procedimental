@@ -1,0 +1,161 @@
+/* Estilos generales de toda la página */
+body {
+  background: #0f0f0f; /* color del fondo */
+  padding: 40px; /* Espacio alrededor del contenido */
+  min-height: 100vh; /* Altura mínima igual al alto de la ventana */
+  font-family: "Segoe UI", sans-serif; /*fuente*/
+}
+/* Contenedor principal del formulario */
+.contenedor {
+  border: 1px solid #7c4dff; /*borde morado*/
+  background: #1b1b1b; 
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0px 0px 30px rgba(140, 82, 255, 0.25); /* Sombra morada */
+  overflow: hidden; /* Oculta contenido que sobresalga */
+}
+/* Título principal */
+.titulo {
+  border-bottom: 1px solid #2f2f2f; /* Línea inferior */
+  padding: 25px; /* Espaciado interno */
+  font-weight: bold; /* Texto en negrita */
+  font-size: 32px; /* Tamaño del texto */
+  text-align: center; /* Centrado */
+  color: #bb86fc;
+}
+/* Texto descriptivo debajo del título */
+.subtitulo {
+  text-align: center;
+  color: #b5b5b5;
+  margin-top: -10px; /* Reduce espacio superior */
+  margin-bottom: 25px; /* Espacio inferior */
+}
+/* Contenedor de las dos columnas */
+.contenido {
+  display: flex; /* Activa Flexbox: facilita la alineación */
+  gap: 20px; /* Espacio entre columnas */
+  padding: 25px; /* Espaciado interno */
+}
+
+/* Columna izquierda */
+.izquierda {
+  width: 25%; /* 25% de ancho */
+  border: 1px solid #383838;
+  background: #242424;
+  border-radius: 18px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column; /* Elementos en columna */
+  align-items: center;/* Centrado horizontal */
+  justify-content: center; /* Centrado vertical */
+  gap: 20px;
+}
+/* Imagen de perfil del usuario */
+.foto-usuario {
+  width: 140px;
+  height: 140px;
+  border: 3px solid #8c52ff;
+  border-radius: 50%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  padding: 10px;
+  background: #1b1b1b;
+}
+
+/* Columna derecha */
+.derecha {
+  width: 75%; /* Ocupa el resto del espacio */
+  border: 1px solid #383838;
+  background: #242424;
+  border-radius: 18px;
+  padding: 30px;
+}
+/* Etiquetas de los campos */
+.label {
+  color: #ececec;
+  font-weight: 600; /* Semi-negrita */
+}
+/* Campos de entrada y áreas de texto */
+.input,
+.textarea {
+  background: #2a2a2a;
+  border: 1px solid #3a3a3a;
+  color: white; /* Texto blanco */
+  transition: 0.3s; /* Animación suave */
+}
+/* Texto de ejemplo dentro de los campos */
+.input::placeholder,
+.textarea::placeholder {
+  color: #9e9e9e;
+}
+/* Estilo al seleccionar un campo */
+.input:focus,
+.textarea:focus {
+  border-color: #9b5cff;
+  box-shadow: 0 0 8px rgba(155, 92, 255, 0.5); /* Resplandor */
+}
+/* Color de los iconos */
+.icon {
+  color: #bb86fc;
+}
+/* Contenedor de botones */
+.botones {
+  display: flex; /* Botones en fila */
+  gap: 15px; /* Separación entre botones */
+  margin-top: 20px;
+}
+/* Botón principal morado */
+.button.is-purple {
+  background: #8c52ff;
+  color: white;
+  border: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+/* Efecto al pasar el mouse */
+.button.is-purple:hover {
+  background: #a66cff;
+  transform: scale(1.02); /* Aumenta ligeramente el tamaño */
+}
+/* Botón secundario oscuro */
+.button.is-dark-custom {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #444;
+  font-weight: bold;
+  transition: 0.3s;
+}
+/* Efecto hover del botón oscuro */
+.button.is-dark-custom:hover {
+  background: #3a3a3a;
+}
+/* Botón para regresar */
+.btn-volver {
+    background: #1f1f1f;
+    color: #ececec;
+    border: 1px solid #7c4dff;
+    border-radius: 12px;
+    font-weight: 600;
+    padding: 12px 22px;
+    text-decoration: none; /* Quita el subrayado */
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-volver:hover {
+    background: #a66cff;
+    color: white;
+}
+/* Diseño adaptable */
+@media screen and (max-width: 768px) {
+  .contenido { /* Las columnas pasan a estar una debajo de la otra */
+    flex-direction: column;
+  }
+/* Ambas columnas ocupan todo el ancho */
+  .izquierda,
+  .derecha {
+    width: 100%;
+  }
+/* Los botones se acomodan en columna */
+  .botones {
+    flex-direction: column;
+  }
+}
