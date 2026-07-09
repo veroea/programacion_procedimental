@@ -1,17 +1,17 @@
-console.log("Hola mundo");
-let nombre = document.getElementByName("nombre").value;
-let apellido = document.getElementByName("apellido").value;
-let tipoDocumento = document.getElementByName("tipoDocumento").value;
-let numeroDocumento = document.getElementById("numeroDocumento").value;
-let telefono = document.getElementById("telefono").value;
-let email = document.getElementByName("email").value;
-let genero = document.getElementByName("genero").value;
-let cargo = document.getElementByName("cargo").value;
-let fechaNacimiento = document.getElementById("fechaNacimiento").value;
-let contraseña = document.getElementById("contraseña").value;
-
 function ValidarDatos() {
-  // Nombre
+
+  let nombre = document.getElementById("nombre").value;
+  let apellido = document.getElementById("apellido").value;
+  let tipoDocumento = document.getElementById("tipoDocumento").value;
+  let numeroDocumento = document.getElementById("numeroDocumento").value;
+  let telefono = document.getElementById("telefono").value;
+  let email = document.getElementById("email").value;
+  let genero = document.getElementById("genero").value;
+  let cargo = document.getElementById("cargo").value;
+  let fechaNacimiento = document.getElementById("fechaNacimiento").value;
+  let contraseña = document.getElementById("contraseña").value;
+
+
   if (
     nombre == "" ||
     apellido == "" ||
@@ -19,22 +19,38 @@ function ValidarDatos() {
     telefono == "" ||
     email == ""
   ) {
-    console.log("Los campos estan vacios");
-  } else {
-    if (nombre != /[a-zA-Z]/) {
-      alert("Este campo no acepta números");
+    alert("Los campos estan vacios");
+  } 
+  
+  else {
+
+    // Nombre
+    if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
+      alert("El nombre no acepta números");
     }
-    if (apellido != /[a-zA-Z]/) {
-      alert("Este campo no acepta números");
+
+    // Apellido
+    if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(apellido)) {
+      alert("El apellido no acepta números");
     }
-    if (numeroDocumento != /[^\d+$]/) {
-      alert("Este campo solo acepta números");
+
+    // Documento
+    if (!/^\d+$/.test(numeroDocumento)) {
+      alert("El documento solo acepta números");
     }
-    if (telefono != /[^\d{1,10}$]/) {
-      alert("Este campo solo acepta números y solo se permiten 10 digitos");
+
+    // Teléfono
+    if (!/^\d{10}$/.test(telefono)) {
+      alert("El teléfono solo acepta números y debe tener 10 dígitos");
     }
-    if (correo != include("@")) {
-      alert("Este campo debe incluir @");
+
+    // Email
+    if (!email.includes("@")) {
+      alert("El correo debe incluir @");
+    }
+
+    else {
+      alert("Datos correctos");
     }
   }
 }
