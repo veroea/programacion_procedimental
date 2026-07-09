@@ -19,38 +19,39 @@ function ValidarDatos() {
     telefono == "" ||
     email == ""
   ) {
-    alert("Los campos estan vacios");
+    Swal.fire("Los campos estan vacios");
   } 
   
   else {
 
     // Nombre
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
-      alert("El nombre no acepta números");
+      Swal.fire("El nombre no acepta números");
     }
 
     // Apellido
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(apellido)) {
-      alert("El apellido no acepta números");
+      Swal.fire("El apellido no acepta números");
     }
 
     // Documento
     if (!/^\d+$/.test(numeroDocumento)) {
-      alert("El documento solo acepta números");
+      Swal.fire("El documento solo acepta números");
     }
 
     // Teléfono
     if (!/^\d{10}$/.test(telefono)) {
-      alert("El teléfono solo acepta números y debe tener 10 dígitos");
+      Swal.fire("El teléfono solo acepta números y debe tener 10 dígitos");
     }
 
     // Email
     if (!email.includes("@")) {
-      alert("El correo debe incluir @");
+      Swal.fire("El correo debe incluir @");
     }
 
     else {
-      alert("Datos correctos");
+      Swal.fire("Datos enviados");
     }
   }
 }
+document.getElementById("btnGuardar").onclick = ValidarDatos;

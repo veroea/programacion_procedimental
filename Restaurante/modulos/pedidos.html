@@ -34,6 +34,7 @@
               <label class="label">Nombre del usuario</label>
               <div class="control has-icons-left">
                 <input
+                  id="nombreUsuario"
                   class="input"
                   type="text"
                   placeholder="Ingresa tu nombre"
@@ -49,6 +50,7 @@
               <label class="label">Producto</label>
               <div class="control has-icons-left">
                 <input
+                  id="producto"
                   class="input"
                   type="text"
                   placeholder="Ej: Banana split"
@@ -63,7 +65,7 @@
             <div class="field">
               <label class="label">Cantidad</label>
               <div class="control has-icons-left">
-                <input class="input" type="number" placeholder="Cantidad" />
+                <input id="cantidad" class="input" type="number" placeholder="Cantidad" />
                 <span class="icon is-small is-left">
                   <i class="fa-solid fa-hashtag"></i>
                 </span>
@@ -78,6 +80,7 @@
               <label class="label">Dirección</label>
               <div class="control has-icons-left">
                 <input
+                  id="direccion"
                   class="input"
                   type="text"
                   placeholder="Ingresa tu dirección"
@@ -93,6 +96,7 @@
               <label class="label">Teléfono</label>
               <div class="control has-icons-left">
                 <input
+                  id="telefono"
                   class="input"
                   type="tel"
                   placeholder="Número telefónico"
@@ -108,7 +112,7 @@
               <label class="label">Método de pago</label>
               <div class="control">
                 <div class="select is-fullwidth">
-                  <select>
+                  <select id="metodoPago">
                     <option>Selecciona un método</option>
                     <option>Efectivo</option>
                     <option>Tarjeta</option>
@@ -126,6 +130,7 @@
           <label class="label">Observaciones</label>
           <div class="control">
             <textarea
+              id="observaciones"
               class="textarea"
               placeholder="Copia aqui como deseas que sea tu pedido..."
             ></textarea>
@@ -135,7 +140,11 @@
         <!-- Botón -->
         <div class="field mt-5">
           <div class="control">
-            <button class="button is-purple is-fullwidth is-medium">
+            <button 
+              type="button" 
+              class="button is-purple is-fullwidth is-medium"
+              onclick="ValidarDatos()">
+
               <i class="fa-solid fa-paper-plane mr-2"></i>
               Enviar Pedido
             </button>
@@ -149,6 +158,7 @@
         </div>
       </form>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src = "../js/pedidos.js"></script>
   </body>
 </html>
