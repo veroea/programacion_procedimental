@@ -137,7 +137,7 @@
                   <div class="control">
                     <textarea
                       class="textarea"
-                      id="conceptos"
+                      id="concepto"
                       placeholder="Escribe el concepto"
                     ></textarea>
                   </div>
@@ -167,12 +167,12 @@
               <!-- BOTONES -->
               <div class="column is-12">
                 <div class="botones">
-                  <button class="button is-purple is-fullwidth">
+                  <button class="button is-purple is-fullwidth" type="button" id="btnGuardar">
                     <i class="fa-solid fa-floppy-disk mr-2"></i>
                     Guardar información
                   </button>
 
-                  <button class="button is-dark-custom is-fullwidth">
+                  <button class="button is-dark-custom is-fullwidth" type="reset">
                     <i class="fa-solid fa-xmark mr-2"></i>
                     Cancelar
                   </button>
@@ -190,6 +190,7 @@
         </div>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/contabilidad.js"></script>
   </body>
 </html>

@@ -12,37 +12,65 @@ let observaciones = document.getElementById("observaciones").value;
         nombreUsuario == '' ||
         producto == '' ||
         cantidad == '' ||
-        direccion == '' ||
         telefono == ''
     ) {
-        Swal.fire('Los campos están vacíos');
+        Swal.fire({
+        title: "Los campos estan vacios",
+        icon: "error"
+        });
+        console.log("La función se ejecutó");
+        return;
     }
 
     else {
 
-        // Validar nombre de usuario
         if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombreUsuario)) {
-            Swal.fire('El nombre de usuario no acepta números');
+            console.log("Este espacio debe contener letras")
+            Swal.fire({
+            title: "Este espacio debe contener letras",
+            icon: "error",
+            draggable: true
+            });
+            return;
         }
 
-        // Validar producto
         if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(producto)) {
-            Swal.fire('El producto no acepta números');
+            console.log("Este espacio debe contener letras")
+            Swal.fire({
+            title: "Este espacio debe contener letras",
+            icon: "error",
+            draggable: true
+            });
+            return;
         }
 
-        // Validar cantidad
         if (!/^\d+$/.test(cantidad)) {
-            Swal.fire('La cantidad solo acepta números');
+            console.log("Este espacio debe contener numeros")
+            Swal.fire({
+            title: "Este espacio debe contener numeros",
+            icon: "error",
+            draggable: true
+            });
+            return;
         }
 
-        // Validar teléfono
         if (!/^\d{1,10}$/.test(telefono)) {
-            Swal.fire('El teléfono solo acepta números y debe tener entre 1 y 10 dígitos');
+            console.log("Este espacio debe contener numeros")
+            Swal.fire({
+            title: "Este espacio debe contener numeros",
+            icon: "error",
+            draggable: true
+            });
+            return;
         }
 
-        // Si todo está correcto
         else {
-            Swal.fire('Datos enviados');
+            Swal.fire({
+            title: "Guardado!",
+            icon: "success",
+            draggable: true
+            });
+            return;
         }
     }
 }

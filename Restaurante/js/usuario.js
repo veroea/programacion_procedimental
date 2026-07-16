@@ -19,38 +19,75 @@ function ValidarDatos() {
     telefono == "" ||
     email == ""
   ) {
-    Swal.fire("Los campos estan vacios");
+        Swal.fire({
+        title: "Los campos estan vacios",
+        icon: "error"
+        });
+        console.log("La función se ejecutó");
+        return;
   } 
   
   else {
 
-    // Nombre
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
-      Swal.fire("El nombre no acepta números");
+            console.log("Este espacio debe contener letras")
+            Swal.fire({
+            title: "Este espacio debe contener letras",
+            icon: "error",
+            draggable: true
+            });
+            return;
     }
 
-    // Apellido
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(apellido)) {
-      Swal.fire("El apellido no acepta números");
+            console.log("Este espacio debe contener letras")
+            Swal.fire({
+            title: "Este espacio debe contener letras",
+            icon: "error",
+            draggable: true
+            });
+            return;
     }
 
     // Documento
     if (!/^\d+$/.test(numeroDocumento)) {
-      Swal.fire("El documento solo acepta números");
+            console.log("Este espacio debe contener numeros")
+            Swal.fire({
+            title: "Este espacio debe contener numeros",
+            icon: "error",
+            draggable: true
+            });
+            return;
     }
 
-    // Teléfono
-    if (!/^\d{10}$/.test(telefono)) {
-      Swal.fire("El teléfono solo acepta números y debe tener 10 dígitos");
+    if (!/^\d+$/.test(telefono)) {
+            console.log("Este espacio debe contener numeros")
+            Swal.fire({
+            title: "Este espacio debe contener numeros",
+            icon: "error",
+            draggable: true
+            });
+            return;
     }
 
     // Email
     if (!email.includes("@")) {
-      Swal.fire("El correo debe incluir @");
+            console.log("Este espacio debe contener un @")
+            Swal.fire({
+            title: "Este espacio debe contener un @",
+            icon: "error",
+            draggable: true
+            });
+            return;
     }
 
     else {
-      Swal.fire("Datos enviados");
+            Swal.fire({
+            title: "Guardado!",
+            icon: "success",
+            draggable: true
+            });
+            return;
     }
   }
 }
