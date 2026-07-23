@@ -83,8 +83,6 @@ let valor = document.getElementById("valor").value;
             });
             return;
         }
-
-        else {
             Swal.fire({
             title: "Guardado!",
             icon: "success",
@@ -92,7 +90,7 @@ let valor = document.getElementById("valor").value;
             });
             return;
         }
-    }
 }
+
 
 document.getElementById("btnGuardar").onclick = ValidarDatos;

@@ -62,14 +62,13 @@ function ValidarDatos() {
             return;
         }
 
-        else {
             Swal.fire({
             title: "Guardado!",
             icon: "success",
             draggable: true
             });
             return;
-        }
+        
     }
 }
 document.getElementById("btnGuardar").onclick = ValidarDatos;
