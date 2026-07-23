@@ -11,6 +11,7 @@ let valor = document.getElementById("valor").value;
  if (
         nombre == '' ||
         ventas == '' ||
+        fecha == '' ||
         ingresos == '' ||
         egresos == '' ||
         valor == ''
@@ -43,6 +44,14 @@ let valor = document.getElementById("valor").value;
             draggable: true
             });
             return;
+        }
+
+        if (!fecha) {
+           Swal.fire({
+           title: "Debe seleccionar una fecha",
+           icon: "error"
+           });
+           return;
         }
 
         if (!/^\d+$/.test(ingresos)) {
