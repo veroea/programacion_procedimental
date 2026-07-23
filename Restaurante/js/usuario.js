@@ -30,9 +30,9 @@ function ValidarDatos() {
   else {
 
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombre)) {
-            console.log("Este espacio debe contener letras")
+            console.log("El espacio de nombre debe contener letras")
             Swal.fire({
-            title: "Este espacio debe contener letras",
+            title: "El espacio de nombre debe contener letras",
             icon: "error",
             draggable: true
             });
@@ -40,9 +40,9 @@ function ValidarDatos() {
     }
 
     if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(apellido)) {
-            console.log("Este espacio debe contener letras")
+            console.log("El espacio de apellido debe contener letras")
             Swal.fire({
-            title: "Este espacio debe contener letras",
+            title: "El espacio de apellido debe contener letras",
             icon: "error",
             draggable: true
             });
@@ -51,19 +51,19 @@ function ValidarDatos() {
 
     // Documento
     if (!/^\d+$/.test(numeroDocumento)) {
-            console.log("Este espacio debe contener numeros")
+            console.log("El espacio de numero de documento debe contener numeros")
             Swal.fire({
-            title: "Este espacio debe contener numeros",
+            title: "El espacio de numero de documento debe contener numeros",
             icon: "error",
             draggable: true
             });
             return;
     }
 
-    if (!/^\d+$/.test(telefono)) {
-            console.log("Este espacio debe contener numeros")
+    if (!/^\d{1,10}$/.test(telefono)) {
+            console.log("El espacio de telefono debe contener numeros y deben ser 10 digitos")
             Swal.fire({
-            title: "Este espacio debe contener numeros",
+            title: "El espacio de telefono debe contener numeros y deben ser 10 digitos",
             icon: "error",
             draggable: true
             });
@@ -72,9 +72,9 @@ function ValidarDatos() {
 
     // Email
     if (!email.includes("@")) {
-            console.log("Este espacio debe contener un @")
+            console.log("El espacio de email debe contener un @")
             Swal.fire({
-            title: "Este espacio debe contener un @",
+            title: "El espacio de email debe contener un @",
             icon: "error",
             draggable: true
             });

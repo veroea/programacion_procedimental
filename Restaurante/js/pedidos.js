@@ -25,9 +25,9 @@ let observaciones = document.getElementById("observaciones").value;
     else {
 
         if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(nombreUsuario)) {
-            console.log("Este espacio debe contener letras")
+            console.log("El espacio de nombre del usuario debe contener letras")
             Swal.fire({
-            title: "Este espacio debe contener letras",
+            title: "El espacio de nombre del usuario debe contener letras",
             icon: "error",
             draggable: true
             });
@@ -35,9 +35,9 @@ let observaciones = document.getElementById("observaciones").value;
         }
 
         if (!/^[a-zA-ZÁÉÍÓÚáéíóúñÑ\s]+$/.test(producto)) {
-            console.log("Este espacio debe contener letras")
+            console.log("El espacio de producto debe contener letras")
             Swal.fire({
-            title: "Este espacio debe contener letras",
+            title: "El espacio de producto debe contener letras",
             icon: "error",
             draggable: true
             });
@@ -45,9 +45,9 @@ let observaciones = document.getElementById("observaciones").value;
         }
 
         if (!/^\d+$/.test(cantidad)) {
-            console.log("Este espacio debe contener numeros")
+            console.log("El espacio de cantidad debe contener numeros")
             Swal.fire({
-            title: "Este espacio debe contener numeros",
+            title: "El espacio de cantidad debe contener numeros",
             icon: "error",
             draggable: true
             });
@@ -55,9 +55,9 @@ let observaciones = document.getElementById("observaciones").value;
         }
 
         if (!/^\d{1,10}$/.test(telefono)) {
-            console.log("Este espacio debe contener numeros")
+            console.log("El espacio de telefono debe contener numeros y deben ser 10 digitos")
             Swal.fire({
-            title: "Este espacio debe contener numeros",
+            title: "El espacio de telefono debe contener numeros y deben ser 10 digitos",
             icon: "error",
             draggable: true
             });
